@@ -718,6 +718,11 @@ textarea.inputForm {
   padding: 25px 0;
   background-color: rgba(67, 81, 131, 0.1254901961);
 }
+@media (max-width: 768px) {
+  .mainIntro {
+    padding-top: 0px;
+  }
+}
 .mainIntro .inner {
   width: min(100% - 24px, 1320px);
   margin: auto;
