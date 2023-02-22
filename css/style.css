@@ -1403,7 +1403,7 @@ footer .copyR .company {
   align-items: center;
   justify-content: center;
   gap: 4px;
-  color: var(--mainColor);
+  color: var(--secondColor);
 }
 footer .copyR img {
   height: 20px;
