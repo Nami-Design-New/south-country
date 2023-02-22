@@ -1,24 +1,21 @@
 $(document).ready(function () {
-  //mainSwiper
-  var mainSwiper = new Swiper(".mainSwiper", {
-    spaceBetween: 0,
-    centeredSlides: true,
-    loop: true,
-    // effect: "fade",
-    speed: 500,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".mainSwiperPagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".mainSwiperNext",
-      prevEl: ".mainSwiperPrev",
-    },
-  });
+
+    //MainSlider
+    var mainSlider = new Swiper(".mainSliderContainer", {
+      spaceBetween: 0,
+      loop: true,
+      effect: "fade",
+      speed: 500,
+      autoplay: {
+        delay: 6000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".mainSliderNext",
+        prevEl: ".mainSliderPrev",
+      },
+    });
+    
   //project Details Slider
   var projectDetailsSlider = new Swiper(".projectDetailsSlider", {
     spaceBetween: 0,
@@ -116,28 +113,6 @@ $(document).ready(function () {
   // modal
   //////////////////////////////////////////
 
-  $(".modal").hide();
-  $(document).on("click", ".reserve , .closeModal", function () {
-    $(".modal").toggleClass("showModal");
-  });
-  //////////////////////////////////////////
-  // language
-  //////////////////////////////////////////
-  $("#englishLanguage").click(function () {
-    $("#styleLink").attr("href", "css/styleEN.css");
-    localStorage.setItem("language", "english");
-  });
-  $("#arabicLanguage").click(function () {
-    $("#styleLink").attr("href", "css/style.css");
-    localStorage.setItem("language", "arabic");
-  });
-  var savedLanguage = localStorage.getItem("language");
-  if (savedLanguage === "english") {
-    $("#styleLink").attr("href", "css/styleEN.css");
-  } else if (savedLanguage === "arabic") {
-    $("#styleLink").attr("href", "css/style.css");
-  }
-  //////////////////////////////////////////
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////
