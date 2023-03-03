@@ -1,4 +1,20 @@
 $(document).ready(function () {
+    //Categories Slider
+    var swiper = new Swiper(".referencesSlider", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      centeredSlides: true,
+      loop: true,
+      slidesPerView: "auto",
+      spaceBetween: 5,
+      speed: 1000,
+      autoplay: {
+        delay: 1500,
+        disableOnInteraction: false,
+      },
+    });
 
     //MainSlider
     var mainSlider = new Swiper(".mainSliderContainer", {

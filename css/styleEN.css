@@ -28,7 +28,7 @@
   margin: 0;
   padding: 0;
   outline: none;
-  direction: rtl;
+  direction: ltr;
   scroll-behavior: smooth;
 }
 
@@ -169,7 +169,7 @@ input {
 [type=number],
 [type=tel],
 [type=url] {
-  direction: rtl;
+  direction: ltr;
 }
 
 .swiperContainer {
@@ -224,25 +224,25 @@ input {
   }
 }
 .swiperContainer .swiper-button-next {
-  left: -60px;
-  right: unset;
-}
-@media (max-width: 1240px) {
-  .swiperContainer .swiper-button-next {
-    left: 0px;
-  }
-}
-.swiperContainer .swiper-button-prev {
   right: -60px;
   left: unset;
 }
 @media (max-width: 1240px) {
-  .swiperContainer .swiper-button-prev {
+  .swiperContainer .swiper-button-next {
     right: 0px;
   }
 }
-.swiperContainer .swiper-button-prev::after {
+.swiperContainer .swiper-button-next::after {
   transform: scaleX(-1);
+}
+.swiperContainer .swiper-button-prev {
+  left: -60px;
+  right: unset;
+}
+@media (max-width: 1240px) {
+  .swiperContainer .swiper-button-prev {
+    left: 0px;
+  }
 }
 .swiperContainer .swiper-pagination {
   width: auto !important;
@@ -283,8 +283,8 @@ input {
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow {
-  left: 1px;
-  right: unset;
+  right: 1px;
+  left: unset;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -375,7 +375,7 @@ content {
   height: 100%;
   background-color: var(--mainColor10);
   position: absolute;
-  left: -8px;
+  right: -8px;
   top: 0;
 }
 .headerContact .inner .link:last-child::after {
@@ -389,7 +389,7 @@ content {
 header {
   position: sticky;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
   z-index: 1024;
   transition: var(--transition);
@@ -452,7 +452,7 @@ header nav .navMenu .navLink.btn {
   header nav .navMenu {
     position: fixed;
     z-index: -1;
-    right: -100%;
+    left: -100%;
     top: 0px;
     width: 100%;
     height: 100vh;
@@ -469,7 +469,7 @@ header nav .navMenu .navLink.btn {
   }
 }
 header nav .navMenu.active {
-  right: 0;
+  left: 0;
 }
 header nav .navBtn {
   margin: auto 0;
@@ -483,7 +483,7 @@ header nav .navBtn {
 }
 header nav .navBtn span {
   position: absolute;
-  left: 0;
+  right: 0;
   display: block;
   width: 24px;
   height: 2px;
@@ -569,7 +569,7 @@ header .dropdown .dropdown-content .dropdownItem img {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 4px;
-  margin-left: 8px;
+  margin-right: 8px;
 }
 header .dropdown:hover .dropdown-content {
   opacity: 1;
@@ -729,8 +729,8 @@ textarea.inputForm {
   position: relative;
   top: unset;
   bottom: unset;
-  right: unset;
   left: unset;
+  right: unset;
   color: var(--mainColor);
 }
 .mainSlider .swiperBtns .swiper-pagination .swiper-pagination-current {
@@ -746,9 +746,9 @@ textarea.inputForm {
 .mainSlider .swiperBtns .swiper-button-next,
 .mainSlider .swiperBtns .swiper-button-prev {
   position: relative;
-  right: unset;
-  top: unset;
   left: unset;
+  top: unset;
+  right: unset;
   bottom: unset;
   margin: 0 10px;
   cursor: pointer;
@@ -758,6 +758,7 @@ textarea.inputForm {
   color: var(--mainColor);
   width: auto;
   transition: all 0.3 ease-in-out;
+  transform: scaleX(-1);
 }
 .mainSlider .mainSliderContainer {
   width: 100%;
@@ -787,7 +788,7 @@ textarea.inputForm {
   background: linear-gradient(to bottom, rgba(67, 81, 131, 0.7960784314) 10%, rgba(67, 81, 131, 0.8588235294) 90%);
   position: absolute;
   bottom: 0;
-  right: 0;
+  left: 0;
   z-index: -1;
   transition: 0.3s ease-in-out;
 }
@@ -862,7 +863,7 @@ textarea.inputForm {
 .mainSlider .swiperBtns {
   position: absolute;
   top: calc(50% - 20px);
-  left: 0;
+  right: 0;
   width: 100%;
   justify-content: space-between;
 }
@@ -1023,13 +1024,13 @@ textarea.inputForm {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 4px;
-  -o-object-position: top right;
-     object-position: top right;
+  -o-object-position: top left;
+     object-position: top left;
   transition: var(--transition);
 }
 .project img:hover {
-  -o-object-position: bottom left;
-     object-position: bottom left;
+  -o-object-position: bottom right;
+     object-position: bottom right;
   transform: scale(1.02);
 }
 .project .inner {
@@ -1042,7 +1043,7 @@ textarea.inputForm {
 .project .inner .tags {
   position: absolute;
   top: 10px;
-  left: 10px;
+  right: 10px;
   width: auto;
   padding: 8px;
   display: flex;
@@ -1116,7 +1117,7 @@ textarea.inputForm {
   transition: var(--transition);
   position: absolute;
   top: -100%;
-  left: 50%;
+  right: 50%;
   transform: translate(-50%, -20px);
   background-color: var(--secondColor);
   padding: 4px 8px;
@@ -1136,7 +1137,7 @@ textarea.inputForm {
   background-color: var(--secondColor);
   position: absolute;
   bottom: 0;
-  left: 50%;
+  right: 50%;
   transform: translate(-50%, 40%) rotate(45deg);
   z-index: -1;
   border-radius: 2px;
@@ -1208,7 +1209,7 @@ textarea.inputForm {
   transition: var(--transition);
   display: block;
   font-size: 32px !important;
-  text-align: right;
+  text-align: left;
   white-space: nowrap;
 }
 .statistics .inner .specifications h6 {
@@ -1367,13 +1368,13 @@ footer .inner .footerTitle {
   color: var(--secondColor);
   position: relative;
   text-transform: capitalize;
-  padding-right: 16px;
+  padding-left: 16px;
   margin-bottom: 10px;
 }
 footer .inner .footerTitle::after {
   content: "";
   position: absolute;
-  right: 4px;
+  left: 4px;
   bottom: 0;
   width: 2px;
   height: 90%;
@@ -1382,7 +1383,7 @@ footer .inner .footerTitle::after {
 footer .inner .footerTitle::before {
   content: "";
   position: absolute;
-  right: 0;
+  left: 0;
   bottom: 0;
   width: 2px;
   height: 70%;
@@ -1414,7 +1415,7 @@ footer .copyR img {
   padding: 80px 0;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to left, #435183, rgba(67, 81, 131, 0.5294117647)), url(../img/banner.jpg);
+  background: linear-gradient(to right, #435183, rgba(67, 81, 131, 0.5294117647)), url(../img/banner.jpg);
   background-size: cover;
 }
 @media (max-width: 768px) {
@@ -1613,9 +1614,9 @@ footer .copyR img {
   display: block;
 }
 .projectDetails .inner .mainInfo .swiperContainer .swiper-button-next {
-  left: 10px;
+  right: 10px;
   top: unset;
-  right: unset;
+  left: unset;
   bottom: 10px;
   background-color: var(--secondColor);
 }
@@ -1623,8 +1624,8 @@ footer .copyR img {
   filter: invert(1);
 }
 .projectDetails .inner .mainInfo .swiperContainer .swiper-button-prev {
-  left: 55px;
-  right: unset;
+  right: 55px;
+  left: unset;
   top: unset;
   bottom: 10px;
   background-color: var(--secondColor);
@@ -1633,8 +1634,8 @@ footer .copyR img {
   filter: invert(1);
 }
 .projectDetails .inner .mainInfo .swiperContainer .swiper-pagination {
-  right: 10px !important;
-  left: unset !important;
+  left: 10px !important;
+  right: unset !important;
   transform: translateX(0%);
 }
 .projectDetails .inner .mainInfo .swiperContainer .swiper-pagination .swiper-pagination-bullet {
@@ -1815,7 +1816,7 @@ footer .copyR img {
 .dataTables_wrapper table.dataTable > thead .sorting_desc::after,
 .dataTables_wrapper table.dataTable > thead .sorting_asc_disabled::after,
 .dataTables_wrapper table.dataTable > thead .sorting_desc_disabled::after {
-  right: 0.5em;
+  left: 0.5em;
   content: "↓";
 }
 .dataTables_wrapper table.dataTable > thead .sorting::before,
@@ -1823,12 +1824,12 @@ footer .copyR img {
 .dataTables_wrapper table.dataTable > thead .sorting_desc::before,
 .dataTables_wrapper table.dataTable > thead .sorting_asc_disabled::before,
 .dataTables_wrapper table.dataTable > thead .sorting_desc_disabled::before {
-  right: 1em;
+  left: 1em;
   content: "↑";
 }
 .dataTables_wrapper table.dataTable > thead > tr > th:not(.sorting_disabled),
 .dataTables_wrapper table.dataTable > thead > tr > td:not(.sorting_disabled) {
-  padding-right: 30px;
+  padding-left: 30px;
 }
 .dataTables_wrapper table.dataTable > thead .sorting:before,
 .dataTables_wrapper table.dataTable > thead .sorting:after,
@@ -1865,7 +1866,7 @@ footer .copyR img {
 .dataTables_wrapper .dataTables_paginate {
   border: 1px solid #eee;
   display: inline-flex;
-  float: left;
+  float: right;
   margin-top: 6px;
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button {
@@ -1889,15 +1890,15 @@ footer .copyR img {
 .dataTables_wrapper table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control,
 .dataTables_wrapper table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control {
   position: relative;
-  padding-right: 30px;
-  padding-left: 12px;
+  padding-left: 30px;
+  padding-right: 12px;
   cursor: pointer;
 }
 .dataTables_wrapper table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before,
 .dataTables_wrapper table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control:before {
   top: 50%;
-  left: unset;
-  right: 5px;
+  right: unset;
+  left: 5px;
   height: 20px;
   width: 20px;
   margin-top: -10px;
@@ -1921,7 +1922,7 @@ footer .copyR img {
 .modal {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   height: 0%;
   width: 0%;
   justify-content: center;
@@ -1936,7 +1937,7 @@ footer .copyR img {
   position: absolute;
   z-index: 1;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6901960784);
@@ -1952,7 +1953,7 @@ footer .copyR img {
 }
 .modal .modalContent .closeModal {
   position: absolute;
-  left: 0px;
+  right: 0px;
   top: -20px;
   width: 40px;
   height: 40px;
@@ -2150,7 +2151,7 @@ footer .copyR img {
   align-items: center;
   justify-content: center;
   position: absolute;
-  left: 10px;
+  right: 10px;
   bottom: 10px;
   z-index: 3;
   border-radius: 8px;
@@ -2389,8 +2390,8 @@ footer .copyR img {
   width: 90%;
   height: 100%;
   top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 50%;
+  transform: translateX(50%);
   border-radius: 12px;
   background-color: var(--mainColor30);
   z-index: -1;
@@ -2401,8 +2402,8 @@ footer .copyR img {
   width: 80%;
   height: 100%;
   top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 50%;
+  transform: translateX(50%);
   border-radius: 12px;
   background-color: var(--mainColor10);
   z-index: -2;
@@ -2427,8 +2428,8 @@ footer .copyR img {
   width: 0%;
   height: 0%;
   top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  right: 50%;
+  transform: translateX(50%) translateY(-50%);
   border-radius: 100px;
   background-color: var(--mainColor);
   z-index: -1;
@@ -2539,7 +2540,7 @@ footer .copyR img {
 .contactUs .contactForm .worldMap .earth {
   position: absolute;
   top: 50%;
-  left: 50%;
+  right: 50%;
   width: 80%;
   height: 80%;
   margin: -40%;
@@ -2553,7 +2554,7 @@ footer .copyR img {
 .contactUs .contactForm .worldMap .orbic {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
 }
@@ -2638,7 +2639,7 @@ footer .copyR img {
   }
   .contactUs .contactForm .worldMap .earth {
     top: 0;
-    left: 0;
+    right: 0;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -2672,10 +2673,10 @@ footer .copyR img {
 .vision {
   padding: 50px 0;
   position: relative;
-  background: linear-gradient(to left, rgba(6, 37, 59, 0), rgba(6, 37, 59, 0.13)), url(../img/bg-1.jpg);
+  background: linear-gradient(to right, rgba(6, 37, 59, 0), rgba(6, 37, 59, 0.13)), url(../img/bg-1.jpg);
   background-attachment: fixed;
   background-size: cover;
-  background-position: right top;
+  background-position: left top;
 }
 @media (max-width: 768px) {
   .vision {
@@ -2708,7 +2709,7 @@ footer .copyR img {
   width: 100%;
   height: 100%;
   position: absolute;
-  left: -10px;
+  right: -10px;
   top: -10px;
   background-color: var(--secondColor10);
   z-index: -1;
@@ -2719,7 +2720,7 @@ footer .copyR img {
   height: 100%;
   position: absolute;
   bottom: -10px;
-  right: -10px;
+  left: -10px;
   background-color: var(--secondColor30);
   z-index: -1;
 }
@@ -2762,7 +2763,7 @@ footer .copyR img {
 }
 @media (max-width: 768px) {
   .vision .inner .info ul {
-    padding-right: 16px;
+    padding-left: 16px;
   }
 }
 .vision .inner .info ul li {
@@ -2812,7 +2813,7 @@ footer .copyR img {
   width: 100%;
   height: 100%;
   position: absolute;
-  left: -10px;
+  right: -10px;
   top: -10px;
   background-color: var(--secondColor10);
   z-index: -1;
@@ -2823,7 +2824,7 @@ footer .copyR img {
   height: 100%;
   position: absolute;
   bottom: -10px;
-  right: -10px;
+  left: -10px;
   background-color: var(--secondColor30);
   z-index: -1;
 }
@@ -2865,7 +2866,7 @@ footer .copyR img {
 }
 @media (max-width: 768px) {
   .goals .inner .info ul {
-    padding-right: 16px;
+    padding-left: 16px;
   }
 }
 .goals .inner .info ul li {
@@ -2983,4 +2984,4 @@ footer .copyR img {
   p {
     font-size: 13px;
   }
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=styleEN.css.map */
